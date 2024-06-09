@@ -1,3 +1,5 @@
+/* src/Header.css */
+
 .header {
   width: 100%;
   background-color: #fff;
@@ -19,6 +21,11 @@
   height: 40px;
 }
 
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
 .top-links {
   display: flex;
   gap: 20px;
@@ -28,6 +35,20 @@
   color: #0077cc;
   text-decoration: none;
   font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.top-links a span {
+  display: inline;
+  margin-left: 5px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  color: #0077cc;
+  margin-left: 20px; /* Ensures some space between icons and hamburger menu */
 }
 
 .main-nav {
@@ -40,13 +61,101 @@
   justify-content: center;
 }
 
+.main-nav nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .main-nav nav a {
   color: #fff;
   text-decoration: none;
   font-size: 16px;
-  margin: 0 15px;
+  margin: 10px;
 }
 
 .main-nav nav a:hover {
   text-decoration: underline;
+}
+
+.mobile-menu {
+  display: none;
+  background-color: #0077cc;
+  color: #fff;
+  padding: 20px;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  z-index: 1000;
+}
+
+.mobile-menu nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+.mobile-menu nav a:hover {
+  text-decoration: underline;
+}
+
+.mobile-search-bar {
+  display: none;
+  padding: 10px;
+  background-color: #0077cc;
+  text-align: center;
+}
+
+.mobile-search-bar input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: calc(100% - 120px);
+  margin-right: 10px;
+}
+
+.search-button {
+  padding: 10px 20px;
+  background-color: #d2232a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .top-links a span {
+    display: none; /* Hide text on smaller screens */
+  }
+
+  .top-links a i {
+    font-size: 18px; /* Show icons */
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .main-nav {
+    display: none; /* Hide main nav on smaller screens */
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .mobile-search-bar {
+    display: block; /* Show search bar on smaller screens */
+  }
+
+  .right-section {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust the gap to move icons closer to the hamburger menu */
+  }
+
+  .mobile-menu {
+    display: block;
+  }
 }
