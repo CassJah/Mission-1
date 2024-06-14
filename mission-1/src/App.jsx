@@ -3,11 +3,13 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import CarInsurance from "./components/CarInsurance";
 import MechanicalBreakdownInsurance from "./components/MechanicalBreakdownInsurance";
+import Carousel from "./components/Carousel";
 
 
 const App = () => (
   <div className="App">
     <Header />
+    <Carousel />
     <CarInsurance />
     <MechanicalBreakdownInsurance />
     <Footer />

@@ -1,0 +1,85 @@
+/* Carousel.css */
+
+/* Add space between header and carousel */
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  margin: 20px 20px 0; /* Add margin-top to create space between header and carousel */
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.carousel-caption h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.carousel-caption p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.carousel-btn {
+  display: inline-block;
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.carousel-btn:hover {
+  background-color: darkgreen;
+}
+
+.carousel-btn-prev,
+.carousel-btn-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carousel-btn-prev {
+  left: 10px;
+}
+
+.carousel-btn-next {
+  right: 10px;
+}
+
+.carousel-btn-prev:hover,
+.carousel-btn-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
