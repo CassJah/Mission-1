@@ -1,0 +1,28 @@
+/* InsuranceSection.css */
+
+.insurance-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1500px; /* Align with other sections */
+  margin-top: -30px;
+  margin-bottom: 10px;
+}
+
+/* Ensure both sections have equal width on larger screens */
+.insurance-section > div {
+  flex: 1;
+  margin: 20px;
+}
+
+/* Stack sections on smaller screens */
+@media (max-width: 768px) {
+  .insurance-section {
+    flex-direction: column;
+  }
+
+  .insurance-section > div {
+    margin: 10px 0; /* Add spacing between stacked sections */
+  }
+}

@@ -31,21 +31,50 @@ const VehicleUpload = () => {
 
   return (
     <section className="vehicle-upload-section">
-      <h2>Upload Your Vehicle Image</h2>
-      <p>Get instant vehicle type recognition</p>
-      <form onSubmit={handleSubmit}>
-        <input type="file" accept="image/*" onChange={handleFileChange} />
-        <button type="submit">Upload</button>
-      </form>
-      {error && <p>Error: {error}</p>}
-      {results && (
-        <div>
-          <h3>Recognition Results</h3>
-          <p>Type: {results.type}</p>
-          <p>Brand: {results.brand}</p>
-          <p>Model: {results.model}</p>
+      <div className="vehicle-upload-content">
+        <div className="side-content">
+          <div className="info-banner">
+            <h4>Vehicle Tips</h4>
+            <p>Regular maintenance can extend the life of your vehicle.</p>
+          </div>
+          <div className="testimonial">
+            <h4>Customer Testimonial</h4>
+            <p>"Turners helped me find the perfect car insurance with ease!"</p>
+          </div>
+          <div className="info-banner">
+            <h4>Why Choose Us?</h4>
+            <p>
+              We offer comprehensive insurance plans tailored to your needs.
+            </p>
+          </div>
+          <div className="feature">
+            <h4>Key Features</h4>
+            <ul>
+              <li>Quick and easy process</li>
+              <li>Accurate vehicle recognition</li>
+              <li>Instant results</li>
+              
+            </ul>
+          </div>
         </div>
-      )}
+        <div className="upload-form">
+          <h2>Upload Your Vehicle Image</h2>
+          <p>Get instant vehicle type recognition</p>
+          <form onSubmit={handleSubmit}>
+            <input type="file" accept="image/*" onChange={handleFileChange} />
+            <button type="submit">Upload</button>
+          </form>
+          {error && <p className="error">Error: {error}</p>}
+          {results && (
+            <div className="results">
+              <h3>Recognition Results</h3>
+              <p>Type: {results.type}</p>
+              <p>Brand: {results.brand}</p>
+              <p>Model: {results.model}</p>
+            </div>
+          )}
+        </div>
+      </div>
     </section>
   );
 };
